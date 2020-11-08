@@ -2,3 +2,31 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url(../images/background.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.postButtons{
+    display: flex;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+}
+.blogButton{
+    margin: 5px;
+    color: black;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #d6a811;
+    border: 2px solid grey;
+    border-left: 2px solid rgb(224, 224, 224);
+    border-top: 2px solid rgb(224, 224, 224);
+}
+.blogButton:hover{
+    text-decoration: none;
+    color:white;
+    background-color: blue;
+}

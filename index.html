@@ -2,32 +2,150 @@
 <html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCRIBBLER</title>
     <!-- CSS files included here -->
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/index.css">
-    <!-- TODO: Include Font Awesome file here -->
+    <!-- Bootstrap CDN included here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Included Font Awesome file here -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- TODO: Include Google Fonts file here -->
+    <!-- Included Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Yanone+Kaffeesatz&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
-
     <!-- ==============HEADER part starts here============= -->
     <header>
         <div class="header">
             <span class="buttons">
-                <input class="topButtons" type="button" value="Sign In">
-                <input class="topButtons" type="button" value="Sign Up">
+                <input class="topButtons" onclick="openModal('signInModal',0)" type="button" value="Sign In">
+                <input class="topButtons" onclick="openModal('signUpModal',1)" type="button" value="Sign Up">
             </span>
             <a id="pageTitle" class="logo-title">ScriBBler</a>
             <p class="middleText">Explore, Imagine, Create</p>
         </div>
     </header>
+
+
+    <!-- ==============MODAL part starts here============= -->
+    <div class="header">
+
+        <!-- ====Sign In Modal======= -->
+
+        <div id="signInModal" class="modals">
+            <!-- Modal content -->
+            <div class="modalContent">
+                <span class="closed">&times;</span>
+                <div class="modalHeader">
+                    <h2>Welcome Back!</h2>
+                </div>
+                <div class="modalBody">
+                    <form autocomplete="off">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="formControl" id="username" placeholder="Enter Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Password</label>
+                            <input type="password" class="formControl" id="password1" placeholder="Enter Password"
+                                required>
+                        </div>
+                        <input type="submit" class="greenButton" value="Sign In">
+                    </form>
+                </div>
+                <div class="modalFooter">
+                    <h6>Not a member? <a href="#" id="signup">Sign Up</a></h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====Sign Up Modal======= -->
+
+        <div id="signUpModal" class="modals">
+            <!-- Modal content -->
+            <div class="modalContent">
+                <span class="closed">&times;</span>
+                <div class="modalHeader">
+                    <h2>Get Started</h2>
+                </div>
+                <div class="modalBody">
+                    <form autocomplete="off">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="formControl" id="name" placeholder="Enter Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="formControl" id="username" placeholder="Enter Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Password</label>
+                            <input type="password" class="formControl" id="password1" placeholder="Enter Password"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Confirm Password</label>
+                            <input type="password" class="formControl" id="password2" placeholder="Confirm Password"
+                                required>
+                        </div>
+                        <input type="submit" class="greenButton" value="Sign Up">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- ==============POST BUTTONS part starts here============= -->
+    <div class="postButtons">
+        <a class="blogButton" href="html/bloglist.html" type="button">All Posts</a>
+        <a class="blogButton" href="#" onclick="openModal('createPostModal', 2)" type="button">Create Post</a>
+    </div>
+    <div id="createPostModal" class="modals">
+        <!-- Modal content -->
+        <div class="modalContent" style="width: 60%;">
+            <span class="closed">&times;</span>
+            <div class="modalHeader" style="border-bottom: none;  margin: 5px 10px;">
+                <h2>Pen Your Post</h2>
+            </div>
+            <div class="modalBody">
+                <form autocomplete="off">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="formControl" style="width: 50%;" id="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content:</label>
+                        <textarea name="content" class="formControl" cols="30" rows="12"></textarea>
+                    </div>
+                    <input type="button" class="greenButton" style="width: auto; margin: 10px 45%;" value="Create">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- All JS files included here -->
+    <script src="scripts/header.js"></script>
 </body>
 
 </html>

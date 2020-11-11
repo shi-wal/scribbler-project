@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCRIBBLER</title>
+
+    <!-- CSS files included here -->
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/bloglist.css">
+
+    <!-- Included Font Awesome file here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CDN included here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Included Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Yanone+Kaffeesatz&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- ==============HEADER part starts here============= -->
+    <header>
+        <div class="header">
+            <span class="buttons">
+                <input class="topButtons" onclick="openModal('signInModal',0)" type="button" value="Sign In">
+                <input class="topButtons" onclick="openModal('signUpModal',1)" type="button" value="Sign Up">
+            </span>
+            <a id="pageTitle" class="logo-title">ScriBBler</a>
+            <p class="middleText">Explore, Imagine, Create</p>
+        </div>
+    </header>
+
+
+    <!-- ==============MODAL part starts here============= -->
+    <div class="header">
+
+        <!-- ====Sign In Modal======= -->
+
+        <div id="signInModal" class="modals">
+            <!-- Modal content -->
+            <div class="modalContent">
+                <span class="closed">&times;</span>
+                <div class="modalHeader">
+                    <h2>Welcome Back!</h2>
+                </div>
+                <div class="modalBody">
+                    <form autocomplete="off">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="formControl" id="username" placeholder="Enter Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Password</label>
+                            <input type="password" class="formControl" id="password1" placeholder="Enter Password"
+                                required>
+                        </div>
+                        <input type="submit" class="greenButton" value="Sign In">
+                    </form>
+                </div>
+                <div class="modalFooter">
+                    <h6>Not a member? <a href="#" id="signup">Sign Up</a></h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====Sign Up Modal======= -->
+
+        <div id="signUpModal" class="modals" style="padding-top: 70px;">
+            <!-- Modal content -->
+            <div class="modalContent">
+                <span class="closed">&times;</span>
+                <div class="modalHeader">
+                    <h2>Get Started</h2>
+                </div>
+                <div class="modalBody">
+                    <form autocomplete="off">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="formControl" id="name" placeholder="Enter Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="formControl" id="username" placeholder="Enter Username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Password</label>
+                            <input type="password" class="formControl" id="password1" placeholder="Enter Password"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Confirm Password</label>
+                            <input type="password" class="formControl" id="password2" placeholder="Confirm Password"
+                                required>
+                        </div>
+                        <input type="submit" class="greenButton" value="Sign Up">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="row post-content">
+
+        <!-- post 1 starts here -->
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="blogPost">
+            <div class="username">
+                <p>Srishti Gupta</p>
+            </div>
+
+            <div class="blog-content">
+
+                <div class="blogTitle">
+                    <span onclick="deletemodal()">
+                        <!--Include Font Awesome icon for delete icon here -->
+                        <i class="fa fa-trash"></i>
+                    </span>
+                    <p class="blogHeading">‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
+                </div>
+                <p class="blogText">Since JavaScript does not have any type-checking, either of these keywords can be
+                    used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are
+                    used for the same purpose, they are different.</p>
+                <span class="postList">
+                    <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+                    <a href="../html/postslist.html">...</a>
+                </span>
+            </div>
+        </div>
+        </div>
+        <!-- post 1 ends here -->
+
+        <!-- post 2 starts here -->
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="blogPost">
+            <div class="username">
+                <p>Colby Fayock</p>
+            </div>
+
+            <div class="blog-content">
+                <div class="blogTitle">
+                    <span onclick="deletemodal()">
+                        <!--Include Font Awesome icon for delete icon here -->
+                        <i class="fa fa-trash"></i>
+                    </span>
+                    <p class="blogHeading">What is linting and how can it save you time?</p>
+                </div>
+                <p class="blogText">One of the biggest challenges in software development is time. It’s something we
+                    can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+                <span class="postList">
+                    <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+                    <a href="../html/postslist.html">...</a>
+                </span>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- post 2 ends here -->
+    <div class="row post-content">
+        <!-- post 3 starts here -->
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="blogPost">
+            <div class="username">
+                <p>Yazeed Bzadough</p>
+            </div>
+
+            <div class="blog-content">
+                <div class="blogTitle">
+                    <span onclick="deletemodal()">
+                        <!--Include Font Awesome icon for delete icon here -->
+                        <i class="fa fa-trash"></i>
+                    </span>
+                    <p class="blogHeading">How to Get More Views on Your Tech Blog</p>
+                </div>
+                <p class="blogText">If you're a developer with a Twitter account, you've already seen everyone and
+                    their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very
+                    least, a recognizable name in the industry.</p>
+                <span class="postList">
+                    <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+                    <a href="../html/postslist.html">...</a>
+                </span>
+            </div>
+        </div>
+        </div>
+        <!-- post 3 ends here -->
+
+        <!-- post 4 starts here -->
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="blogPost">
+                <div class="username">
+                <p>Cedd Burge</p>
+            </div>
+
+            <div class="blog-content">
+                <div class="blogTitle">
+                    <span onclick="deletemodal()">
+                        <!--Include Font Awesome icon for delete icon here -->
+                        <i class="fa fa-trash"></i>
+                    </span>
+                    <p class="blogHeading">How to write easily describable code</p>
+
+                </div>
+                <p class="blogText">When code is not describable using words, most people have to do some mental
+                    mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the
+                    mapping wrong. Different people will map to different words, which
+                    leads to confusion when discussing the code.</p>
+                <span class="postList">
+                    <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+                    <a href="../html/postslist.html">...</a>
+                </span>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- post 4 ends here -->
+    <div class="row post-content">
+        <!-- post 5 starts here -->
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="blogPost">
+            <div class="username">
+                <p>Srishti Gupta</p>
+            </div>
+
+            <div class="blog-content">
+                <div class="blogTitle">
+                    <span onclick="deletemodal()">
+                        <!--Include Font Awesome icon for delete icon here -->
+                        <i class="fa fa-trash"></i>
+                    </span>
+                    <p class="blogHeading">Everything you should know about ‘module’ & ‘require’ in Node.js</p>
+
+                </div>
+                <p class="blogText">Node.js treats each JavaScript file as a separate module. For instance, if you
+                    have a file containing some code and this file is named xyz.js, then this file is treated as a
+                    module in Node, and you can say that you’ve created a module
+                    named xyz.</p>
+                <span class="postList">
+                    <!-- Include Font Awesome icon for horizontal ellipsis icon here -->
+                   <a href="../html/postslist.html">...</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- post 5 ends here -->
+
+
+    <div id="deleteModal" class="modals" style="padding-top: 220px;">
+        <!-- Modal content -->
+        <div class="modalContent">
+            <div class="modalBody">
+                <h5>Are you sure you want to delete this post?</h5>
+                <input type="button" class="yesDelete" value="Yes">
+                <input type="button" id="nodelete" class="yesDelete" style="background-color: green; float:right;" value="No">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- All JS files included here -->
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/bloglist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.blogPost{
+    margin: 20px 0;
+}
+.editButton{
+    float: right;
+}
+.btnstyle{
+    background-color: rgb(239,59,101);
+    color: white;
+    padding: 7px 18px;
+    border: none;
+    margin: 24px 0;
+    box-shadow: 1px 5px 10px 0.5px rgba(190, 54, 86, 0.479);
+}
+.btnstyle:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.commentSection{
+    margin: 30px 0;
+}
+.commentSection textarea{
+    width: 60%;
+}
+.title{
+    margin: 15px 0;
+    font-weight: 600;
+}
+.comments{
+    border: 15px solid rgb(226,228,230);
+    width: 62%;
+    margin: 10px 0;
+}
+.comments p{
+    border: 5px solid rgb(226,228,230);
+    background-color: white;
+    padding: 15px;
+    color: black;
+    margin-bottom: 0;
+}
+#blogTitle{
+    text-align: center;
+    display: table;
+    margin: auto;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#username{
+    margin: 27px 0;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Lobster Two', cursive;
+}
+#blogPosts{
+    margin: 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
